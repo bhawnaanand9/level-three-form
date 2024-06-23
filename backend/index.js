@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const corsOptions = {
-  origin: "*",
+  origin: "https://frontend-sigma-teal.vercel.app/",
   methods: ["GET", "POST"],
 };
 app.use(cors(corsOptions));
