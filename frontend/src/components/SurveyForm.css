@@ -1,0 +1,77 @@
+.survey-form,
+.additional-questions,
+.summary {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-form h3,
+.additional-questions h3,
+.summary h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.survey-form .form-group,
+.additional-questions .form-group,
+.summary ul {
+  margin-bottom: 15px;
+}
+
+.survey-form label,
+.additional-questions label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.survey-form input[type="text"],
+.survey-form input[type="email"],
+.survey-form input[type="number"],
+.survey-form select,
+.survey-form textarea,
+.additional-questions input[type="text"] {
+  width: calc(100% - 12px);
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.summary li {
+  margin-bottom: 10px;
+}
+
+.summary p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
