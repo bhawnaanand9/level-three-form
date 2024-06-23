@@ -2,12 +2,27 @@ const cors = require("cors");
 const express = require("express");
 const app = express();
 const port = 5000;
-const corsOptions = {
-  origin: "https://frontend-1voi3eec6-bhawnas-projects-4cdd8807.vercel.app",
-  methods: ["GET", "POST"],
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: "https://frontend-1voi3eec6-bhawnas-projects-4cdd8807.vercel.app",
+//   methods: ["GET", "POST"],
+// };
+// app.use(cors(corsOptions));
+const allowedOrigins = [
+  "https://frontend-1voi3eec6-bhawnas-projects-4cdd8807.vercel.app",
+  // Add more origins as needed
+];
 
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 app.get("/questions", (req, res) => {
   const topic = req.query.topic;
 
