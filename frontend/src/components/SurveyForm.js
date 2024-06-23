@@ -32,7 +32,7 @@ const SurveyForm = () => {
   const fetchAdditionalQuestions = async (topic) => {
     try {
       const response = await axios.get(
-        `https://api-server-dyu2htr4s-bhawnas-projects-4cdd8807.vercel.app/questions?topic=${formData.surveyTopic}`
+        `https://backend-217ni2tmx-bhawnas-projects-4cdd8807.vercel.app/questions?topic=${formData.surveyTopic}`
       );
       setAdditionalQuestions(response.data.questions);
     } catch (error) {
